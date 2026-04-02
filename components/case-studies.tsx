@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { Card } from "@/components/ui/card"
-import { ArrowUpRight } from "lucide-react"
+import Image from "next/image";
+import { Card } from "@/components/ui/card";
+import { ArrowUpRight } from "lucide-react";
 
 const caseStudies = [
   {
@@ -8,7 +8,8 @@ const caseStudies = [
     brand: "Get Baked",
     category: "Food & Beverage",
     handle: "@getbakeduk",
-    description: "Led brand and marketing for a cult UK bakery, scaling a disruptive, content-first challenger brand. Controlled cross-business workflows, socials, content, emails, print, packaging and e-commerce.",
+    description:
+      "Led brand and marketing for a cult UK bakery, scaling a disruptive, content-first challenger brand. Controlled cross-business workflows, socials, content, emails, print, packaging and e-commerce.",
     stats: [
       { label: "Engagement Increase", value: "+20%" },
       { label: "Conversion Rate", value: "14%" },
@@ -22,7 +23,8 @@ const caseStudies = [
     brand: "Crossfader",
     category: "Music & Education",
     handle: "@wearecrossfader",
-    description: "Spearheaded international educational outlier in the music, DJ and event industry. Managed planning, creating, strategy and scheduling of all content across YouTube, TikTok, Instagram, Discord and Threads.",
+    description:
+      "Spearheaded international educational outlier in the music, DJ and event industry. Managed planning, creating, strategy and scheduling of all content across YouTube, TikTok, Instagram, Discord and Threads.",
     stats: [
       { label: "Instagram", value: "253K" },
       { label: "TikTok", value: "350.9K" },
@@ -36,7 +38,8 @@ const caseStudies = [
     brand: "YouTube (1021 Creative)",
     category: "Tech & Culture",
     handle: "YouTube Culture & Trends Team",
-    description: "Worked directly with YouTube's Culture and Trends Team to manage the UK's Trending Page and build the Shorts algorithm by identifying and tracking social media and cultural trends.",
+    description:
+      "Worked directly with YouTube's Culture and Trends Team to manage the UK's Trending Page and build the Shorts algorithm by identifying and tracking social media and cultural trends.",
     stats: [
       { label: "Duration", value: "2 Years" },
       { label: "Focus", value: "Trends" },
@@ -45,29 +48,35 @@ const caseStudies = [
     logo: "/logos/youtube.png",
     color: "bg-primary/15",
   },
-]
+];
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="py-24 px-6 md:px-12 lg:px-20 bg-secondary/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+    <section
+      id="case-studies"
+      className="py-24 px-6 md:px-12 lg:px-20 bg-secondary/30"
+    >
+      <div className="w-full mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-center items-center text-center md:text-left mb-16">
           <div>
-            <span className="font-serif italic text-primary text-lg mb-4 block">Featured Work</span>
+            <span className="font-serif italic text-primary text-lg mb-4 block">
+              Featured Work
+            </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
               Case Studies
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md mt-4 md:mt-0 leading-relaxed">
-            A selection of projects that showcase my approach to social media management and the results achieved.
+          <p className="text-muted-foreground max-w-md mt-4 md:mt-0 leading-relaxed md:ml-12">
+            A selection of projects that showcase my approach to social media
+            management and the results achieved.
           </p>
         </div>
 
         <div className="space-y-8">
-          {caseStudies.map((study) => (
-            <Card 
+          {caseStudies.map((study, index) => (
+            <Card
               key={study.id}
-              className="group relative overflow-hidden border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+              className={`group relative w-full max-w-4xl overflow-hidden border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}`}
             >
               <div className="grid md:grid-cols-[1fr,auto] gap-6 p-6 md:p-8">
                 <div className="flex flex-col justify-between">
@@ -80,12 +89,16 @@ export function CaseStudies() {
                         height={32}
                         className="object-contain rounded"
                       />
-                      <span className="text-sm text-muted-foreground">{study.category}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {study.category}
+                      </span>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
                       {study.brand}
                     </h3>
-                    <span className="text-sm text-primary mb-3 block">{study.handle}</span>
+                    <span className="text-sm text-primary mb-3 block">
+                      {study.handle}
+                    </span>
                     <p className="text-muted-foreground leading-relaxed max-w-lg">
                       {study.description}
                     </p>
@@ -94,15 +107,21 @@ export function CaseStudies() {
                   <div className="flex flex-wrap gap-6 mt-6">
                     {study.stats.map((stat, index) => (
                       <div key={index}>
-                        <span className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</span>
-                        <span className="block text-sm text-muted-foreground">{stat.label}</span>
+                        <span className="text-2xl md:text-3xl font-bold text-foreground">
+                          {stat.value}
+                        </span>
+                        <span className="block text-sm text-muted-foreground">
+                          {stat.label}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div className="flex items-start md:items-center">
-                  <div className={`w-16 h-16 rounded-full ${study.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`w-16 h-16 rounded-full ${study.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                  >
                     <ArrowUpRight className="w-6 h-6 text-foreground" />
                   </div>
                 </div>
@@ -112,5 +131,5 @@ export function CaseStudies() {
         </div>
       </div>
     </section>
-  )
+  );
 }
