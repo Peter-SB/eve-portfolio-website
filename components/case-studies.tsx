@@ -1,133 +1,135 @@
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
+import { Heart, MessageCircle, Share2, Bookmark } from "lucide-react";
 
 const caseStudies = [
   {
     id: 1,
     brand: "Get Baked",
-    category: "Food & Beverage",
-    handle: "@getbakeduk",
+    label: "GET BAKED | CASE STUDY",
+    title: "Scaling a Cult UK Bakery Brand",
     description:
       "Led brand and marketing for a cult UK bakery, scaling a disruptive, content-first challenger brand. Controlled cross-business workflows, socials, content, emails, print, packaging and e-commerce.",
-    stats: [
-      { label: "Engagement Increase", value: "+20%" },
-      { label: "Conversion Rate", value: "14%" },
-      { label: "Role", value: "Brand & Marketing Manager" },
-    ],
+    stats: { likes: "20K", comments: "1.2K", shares: "8K", saves: "15K" },
     logo: "/logos/get-baked.png",
-    color: "bg-primary/20",
+    cta: "Start Now",
   },
   {
     id: 2,
     brand: "Crossfader",
-    category: "Music & Education",
-    handle: "@wearecrossfader",
+    label: "CROSSFADER | CASE STUDY",
+    title: "Growing a Global Music Community",
     description:
       "Spearheaded international educational outlier in the music, DJ and event industry. Managed planning, creating, strategy and scheduling of all content across YouTube, TikTok, Instagram, Discord and Threads.",
-    stats: [
-      { label: "Instagram", value: "253K" },
-      { label: "TikTok", value: "350.9K" },
-      { label: "YouTube", value: "656K" },
-    ],
+    stats: { likes: "253K", comments: "350K", shares: "656K", saves: "40K" },
     logo: "/logos/crossfader.png",
-    color: "bg-foreground/10",
+    cta: "Book a Call",
   },
   {
     id: 3,
     brand: "YouTube (1021 Creative)",
-    category: "Tech & Culture",
-    handle: "YouTube Culture & Trends Team",
+    label: "YOUTUBE | CASE STUDY",
+    title: "Tracking Culture & Trends for YouTube",
     description:
       "Worked directly with YouTube's Culture and Trends Team to manage the UK's Trending Page and build the Shorts algorithm by identifying and tracking social media and cultural trends.",
-    stats: [
-      { label: "Duration", value: "2 Years" },
-      { label: "Focus", value: "Trends" },
-      { label: "Scope", value: "UK Market" },
-    ],
+    stats: { likes: "50K", comments: "300", shares: "30K", saves: "40K" },
     logo: "/logos/youtube.png",
-    color: "bg-primary/15",
+    cta: "Start Now",
   },
 ];
+
+function StatsBar({
+  stats,
+}: {
+  stats: { likes: string; comments: string; shares: string; saves: string };
+}) {
+  return (
+    <div className="flex items-center gap-4 mt-3 px-3 py-2 bg-white/80 backdrop-blur-sm rounded-full w-fit text-xs font-body font-medium text-foreground">
+      <span className="flex items-center gap-1">
+        <Heart className="w-3.5 h-3.5" />
+        {stats.likes}
+      </span>
+      <span className="flex items-center gap-1">
+        <MessageCircle className="w-3.5 h-3.5" />
+        {stats.comments}
+      </span>
+      <span className="flex items-center gap-1">
+        <Share2 className="w-3.5 h-3.5" />
+        {stats.shares}
+      </span>
+      <span className="flex items-center gap-1">
+        <Bookmark className="w-3.5 h-3.5" />
+        {stats.saves}
+      </span>
+    </div>
+  );
+}
 
 export function CaseStudies() {
   return (
     <section
       id="case-studies"
-      className="py-24 px-6 md:px-12 lg:px-20 bg-secondary/30"
+      className="py-24 px-6 md:px-12 lg:px-20 bg-[#FAFAF5]"
     >
-      <div className="w-full mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-center items-center text-center md:text-left mb-16">
-          <div>
-            <span className="font-serif italic text-primary text-lg mb-4 block">
-              Featured Work
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-              Case Studies
-            </h2>
-          </div>
-          <p className="text-muted-foreground max-w-md mt-4 md:mt-0 leading-relaxed md:ml-12">
-            A selection of projects that showcase my approach to social media
-            management and the results achieved.
-          </p>
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-6">
+          <span className="font-body font-medium tracking-[0.2em] uppercase text-foreground text-sm">
+            Featured Projects
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl uppercase text-foreground mt-4 leading-[0.95]">
+            My Latest
+            <br />
+            Work
+          </h2>
         </div>
 
-        <div className="space-y-8">
-          {caseStudies.map((study, index) => (
-            <Card
-              key={study.id}
-              className={`group relative w-full max-w-4xl overflow-hidden border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}`}
-            >
-              <div className="grid md:grid-cols-[1fr,auto] gap-6 p-6 md:p-8">
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <Image
-                        src={study.logo}
-                        alt={study.brand}
-                        width={32}
-                        height={32}
-                        className="object-contain rounded"
-                      />
-                      <span className="text-sm text-muted-foreground">
-                        {study.category}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
-                      {study.brand}
-                    </h3>
-                    <span className="text-sm text-primary mb-3 block">
-                      {study.handle}
-                    </span>
-                    <p className="text-muted-foreground leading-relaxed max-w-lg">
-                      {study.description}
-                    </p>
-                  </div>
+        <hr className="border-foreground/20 mb-16" />
 
-                  <div className="flex flex-wrap gap-6 mt-6">
-                    {study.stats.map((stat, index) => (
-                      <div key={index}>
-                        <span className="text-2xl md:text-3xl font-bold text-foreground">
-                          {stat.value}
-                        </span>
-                        <span className="block text-sm text-muted-foreground">
-                          {stat.label}
-                        </span>
-                      </div>
-                    ))}
+        {/* Case Studies */}
+        <div className="space-y-20">
+          {caseStudies.map((study, index) => {
+            const isReversed = index % 2 !== 0;
+
+            return (
+              <div
+                key={study.id}
+                className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-12 items-start`}
+              >
+                {/* Image / Logo block */}
+                <div className="w-full md:w-5/12 shrink-0">
+                  <div className="relative bg-muted rounded-lg aspect-[4/3] flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={study.logo}
+                      alt={study.brand}
+                      width={160}
+                      height={160}
+                      className="object-contain"
+                    />
                   </div>
+                  <StatsBar stats={study.stats} />
                 </div>
 
-                <div className="flex items-start md:items-center">
-                  <div
-                    className={`w-16 h-16 rounded-full ${study.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                {/* Text content */}
+                <div className="w-full md:w-7/12 flex flex-col justify-center">
+                  <span className="font-body font-medium tracking-[0.15em] uppercase text-muted-foreground text-xs mb-4">
+                    {study.label}
+                  </span>
+                  <h3 className="font-display text-3xl md:text-4xl uppercase leading-[0.95] text-foreground mb-4">
+                    {study.title}
+                  </h3>
+                  <p className="font-body font-light text-sm md:text-base text-muted-foreground leading-relaxed mb-6 max-w-lg">
+                    {study.description}
+                  </p>
+                  <a
+                    href="#contact"
+                    className="inline-block font-body font-medium text-sm tracking-[0.1em] uppercase border border-foreground rounded-full px-6 py-2.5 text-foreground hover:bg-foreground hover:text-background transition-colors w-fit"
                   >
-                    <ArrowUpRight className="w-6 h-6 text-foreground" />
-                  </div>
+                    {study.cta}
+                  </a>
                 </div>
               </div>
-            </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
