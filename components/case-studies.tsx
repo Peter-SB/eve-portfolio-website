@@ -24,17 +24,17 @@ const caseStudies = [
     logo: "/logos/crossfader.png",
     cta: "Book a Call",
   },
-  {
-    id: 3,
-    brand: "YouTube (1021 Creative)",
-    label: "YOUTUBE | CASE STUDY",
-    title: "Tracking Culture & Trends for YouTube",
-    description:
-      "Worked directly with YouTube's Culture and Trends Team to manage the UK's Trending Page and build the Shorts algorithm by identifying and tracking social media and cultural trends.",
-    stats: { likes: "50K", comments: "300", shares: "30K", saves: "40K" },
-    logo: "/logos/youtube.png",
-    cta: "Start Now",
-  },
+  // {
+  //   id: 3,
+  //   brand: "YouTube (1021 Creative)",
+  //   label: "YOUTUBE | CASE STUDY",
+  //   title: "Tracking Culture & Trends for YouTube",
+  //   description:
+  //     "Worked directly with YouTube's Culture and Trends Team to manage the UK's Trending Page and build the Shorts algorithm by identifying and tracking social media and cultural trends.",
+  //   stats: { likes: "50K", comments: "300", shares: "30K", saves: "40K" },
+  //   logo: "/logos/youtube.png",
+  //   cta: "Start Now",
+  // },
 ];
 
 function StatsBar({

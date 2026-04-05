@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[84vh] flex items-center px-6 md:px-12 lg:px-20 bg-[#FBF9F1] overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center px-6 md:px-12 lg:px-20 bg-[#FBF9F1] overflow-hidden">
       {/* Top thin nav line */}
       <div className="absolute left-0 right-0 top-6 px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between">
