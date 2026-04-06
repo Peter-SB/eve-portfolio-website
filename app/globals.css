@@ -159,3 +159,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Paper texture overlay for blue/coloured sections */
+.paper-texture {
+  position: relative;
+  isolation: isolate;
+}
+
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/textures/textured-paper.png");
+  background-size: 340px;
+  background-repeat: repeat;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: -1;
+}

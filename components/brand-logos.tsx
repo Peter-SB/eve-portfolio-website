@@ -40,8 +40,8 @@ export function BrandLogos() {
   }, []);
 
   return (
-    <section className="py-16 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
-      <p className="text-center text-sm text-muted-foreground mb-8 tracking-wide uppercase">
+    <section className="paper-texture py-14 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
+      <p className="text-center text-sm text-muted-foreground mb-10 tracking-wide uppercase">
         Brands I&apos;ve Worked With
       </p>
       <div

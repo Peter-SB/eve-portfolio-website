@@ -32,7 +32,7 @@ const highlights = [
 
 export function Highlights() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-20 bg-[#CBD5E1]">
+    <section className="paper-texture py-24 px-6 md:px-12 lg:px-20 bg-[#CBD5E1]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center font-body font-medium tracking-[0.2em] uppercase text-foreground text-sm md:text-base mb-16">
           Further Experience
