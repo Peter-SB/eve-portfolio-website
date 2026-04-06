@@ -70,20 +70,19 @@ export function CaseStudies() {
       id="case-studies"
       className="py-24 px-6 md:px-12 lg:px-20 bg-[#FAFAF5]"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className=" mx-auto">
         {/* Header */}
         <div className="text-center mb-6">
           <span className="font-body font-medium tracking-[0.2em] uppercase text-foreground text-sm">
             Featured Projects
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl uppercase text-foreground mt-4 leading-[0.95]">
-            My Latest
+            My Latest Work
             <br />
-            Work
           </h2>
         </div>
 
-        <hr className="border-foreground/20 mb-16" />
+        <hr className="border-foreground/20 mb-16 max-w-5xl mx-auto" />
 
         {/* Case Studies */}
         <div className="space-y-20">
@@ -96,13 +95,15 @@ export function CaseStudies() {
                 className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} gap-8 md:gap-12 items-start`}
               >
                 {/* Image / Logo block */}
-                <div className="w-full md:w-5/12 shrink-0">
+                <div
+                  className={`w-full md:w-62 shrink-0 flex flex-col ${isReversed ? "md:items-end" : "md:items-start"}`}
+                >
                   <div className="relative bg-muted rounded-lg aspect-[4/3] flex items-center justify-center overflow-hidden">
                     <Image
                       src={study.logo}
                       alt={study.brand}
-                      width={160}
-                      height={160}
+                      width={600}
+                      height={600}
                       className="object-contain"
                     />
                   </div>
@@ -110,7 +111,9 @@ export function CaseStudies() {
                 </div>
 
                 {/* Text content */}
-                <div className="w-full md:w-7/12 flex flex-col justify-center">
+                <div
+                  className={`w-full md:w-7/12 flex flex-col justify-center ${isReversed ? "items-end text-right" : "items-start text-left"}`}
+                >
                   <span className="font-body font-medium tracking-[0.15em] uppercase text-muted-foreground text-xs mb-4">
                     {study.label}
                   </span>

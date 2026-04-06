@@ -9,7 +9,7 @@ const reels = [
   { src: "/reels/LAUNDRY-CLUB-reel.mp4", label: "Laundry Club" },
   { src: "/reels/Last-sun-dance.jpg", label: "Last Sun Dance" },
   { src: "/reels/Cross-Fader-2.mp4", label: "Crossfader" },
-  { src: "/reels/LAUNDRY-CLUB-reel.mp4", label: "Laundry Club" },
+  { src: "/reels/Cross-Fader-3.mp4", label: "Crossfader" },
   { src: "/reels/LAUNDRY-CLUB-reel.mp4", label: "Laundry Club" },
 ];
 
@@ -39,11 +39,11 @@ export function ReelsGallery() {
   );
 
   return (
-    <section className="py-24 bg-[#FAFAF5] bg-white overflow-hidden">
-      <div className="flex items-center gap-8 md:gap-12 pl-6 md:pl-12 lg:pl-20">
+    <section className="py-12 md:py-24 bg-[#FAFAF5] bg-white overflow-hidden border border-black">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 pl-6 md:pl-12 lg:pl-20">
         {/* Left: title + controls — fixed width, doesn't scroll */}
-        <div className="shrink-0 w-40 md:w-72 md:mr-8 flex flex-col justify-between self-stretch py-2">
-          <div>
+        <div className="shrink-0 w-full md:w-72 md:mr-8 flex flex-col gap-0 md:justify-between self-stretch py-2">
+          <div className="pb-5">
             <span className="font-body font-medium tracking-[0.2em] uppercase text-foreground/60 text-xs">
               Content Samples
             </span>
@@ -53,7 +53,7 @@ export function ReelsGallery() {
           </div>
 
           {/* Prev / Next arrows + counter */}
-          <div className="flex flex-col gap-3 mt-8">
+          <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
               <button
                 onClick={() => scrollTo(current - 1)}

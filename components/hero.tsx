@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -47,14 +46,27 @@ export function Hero() {
           </p>
 
           <div className="flex gap-4">
-            <Button className="rounded-full border border-foreground bg-transparent px-8 py-3 text-sm font-body">
-              Get Started
-            </Button>
+            <a
+              href="/cv.pdf"
+              className="inline-flex items-center rounded-full border border-black text-black bg-transparent px-6 py-3 text-sm font-body"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See CV
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              className="inline-flex items-center rounded-full bg-[#0077B5] text-white px-6 py-3 text-sm font-body"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin
+            </a>
             <a
               href="#case-studies"
-              className="inline-flex items-center text-sm font-body text-muted-foreground underline-offset-2"
+              className="inline-flex items-center text-sm font-body text-black bg-transparent"
             >
-              See work
+              Jump in \/
             </a>
           </div>
         </div>
