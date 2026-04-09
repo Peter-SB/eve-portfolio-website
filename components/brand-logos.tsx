@@ -40,7 +40,7 @@ export function BrandLogos() {
   }, []);
 
   return (
-    <section className="paper-texture py-14 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
+    <section className="py-14 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
       <p className="text-center text-sm text-muted-foreground mb-10 tracking-wide uppercase">
         Brands I&apos;ve Worked With
       </p>
@@ -59,7 +59,7 @@ export function BrandLogos() {
               alt={brand.name}
               width={150}
               height={60}
-              className="object-contain max-h-14 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              className="paper-texture object-contain max-h-14 w-auto opacity-70 hover:opacity-100 transition-opacity"
             />
           </div>
         ))}
