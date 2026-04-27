@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
+import { assetPath } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -34,7 +35,7 @@ export function Hero() {
             Contact
           </a>
           <a
-            href="/eve-dod-cv.pdf"
+            href={assetPath("/eve-dod-cv.pdf")}
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-60 transition-opacity"
@@ -91,7 +92,7 @@ export function Hero() {
                 Creative Work
               </a>
               <a
-                href="/eve-dod-cv.pdf"
+                href={assetPath("/eve-dod-cv.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full bg-[#D3DCE5] text-black font-body font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
@@ -104,7 +105,7 @@ export function Hero() {
           {/* Right: hero doodle */}
           <div className="flex-shrink-0 flex items-center justify-center md:justify-end">
             <Image
-              src="/hero-doodle.png"
+              src={assetPath("/hero-doodle.png")}
               alt="Eve Dodd photo strip"
               width={360}
               height={560}

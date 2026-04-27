@@ -2,15 +2,16 @@
 
 import Image from "next/image";
 import { useRef, useState, useCallback } from "react";
+import { assetPath } from "@/lib/utils";
 
 const reels = [
-  { src: "/reels/Cross-Fader-reel.mp4", label: "Crossfader" },
-  { src: "/reels/Get-Baked-reel.mp4", label: "Get Baked" },
-  { src: "/reels/LAUNDRY-CLUB-reel.mp4", label: "Laundry Club" },
-  { src: "/reels/Last-sun-dance.jpg", label: "Last Sun Dance" },
-  { src: "/reels/Cross-Fader-2.mp4", label: "Crossfader" },
-  { src: "/reels/Cross-Fader-3.mp4", label: "Crossfader" },
-  { src: "/reels/LAUNDRY-CLUB-reel.mp4", label: "Laundry Club" },
+  { src: assetPath("/reels/Cross-Fader-reel.mp4"), label: "Crossfader" },
+  { src: assetPath("/reels/Get-Baked-reel.mp4"), label: "Get Baked" },
+  { src: assetPath("/reels/LAUNDRY-CLUB-reel.mp4"), label: "Laundry Club" },
+  { src: assetPath("/reels/Last-sun-dance.jpg"), label: "Last Sun Dance" },
+  { src: assetPath("/reels/Cross-Fader-2.mp4"), label: "Crossfader" },
+  { src: assetPath("/reels/Cross-Fader-3.mp4"), label: "Crossfader" },
+  { src: assetPath("/reels/LAUNDRY-CLUB-reel.mp4"), label: "Laundry Club" },
 ];
 
 function isImage(src: string) {

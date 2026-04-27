@@ -2,17 +2,18 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { assetPath } from "@/lib/utils";
 
 const brands = [
-  { name: "Get Baked", logo: "/logos/get-baked.png" },
-  { name: "YouTube", logo: "/logos/youtube.png" },
-  { name: "Crossfader", logo: "/logos/crossfader.png" },
-  { name: "Last Sun Dance", logo: "/logos/last-sun-dance.png" },
-  { name: "DAZN", logo: "/logos/dazn.png" },
-  { name: "George", logo: "/logos/george.png" },
-  { name: "Laundry Club", logo: "/logos/laundry-club.png" },
-  { name: "1021 Creative", logo: "/logos/1021-creative.png" },
-  { name: "Honda", logo: "/logos/honda.png" },
+  { name: "Get Baked", logo: assetPath("/logos/get-baked.png") },
+  { name: "YouTube", logo: assetPath("/logos/youtube.png") },
+  { name: "Crossfader", logo: assetPath("/logos/crossfader.png") },
+  { name: "Last Sun Dance", logo: assetPath("/logos/last-sun-dance.png") },
+  { name: "DAZN", logo: assetPath("/logos/dazn.png") },
+  { name: "George", logo: assetPath("/logos/george.png") },
+  { name: "Laundry Club", logo: assetPath("/logos/laundry-club.png") },
+  { name: "1021 Creative", logo: assetPath("/logos/1021-creative.png") },
+  { name: "Honda", logo: assetPath("/logos/honda.png") },
 ];
 
 export function BrandLogos() {

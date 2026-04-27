@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/utils";
 
 const highlights = [
   {
     number: "01",
-    logo: "/logos/last-sun-dance-alt.png",
+    logo: assetPath("/logos/last-sun-dance-alt.png"),
     brand: "Last Sun Dance",
     title: "Membership Growth",
     description:
@@ -12,7 +13,7 @@ const highlights = [
   },
   {
     number: "02",
-    logo: "/logos/george.png",
+    logo: assetPath("/logos/george.png"),
     brand: "ASDA George",
     title: "Omni-Channel Campaigns",
     description:
@@ -21,7 +22,7 @@ const highlights = [
   },
   {
     number: "03",
-    logo: "/logos/dazn.png",
+    logo: assetPath("/logos/dazn.png"),
     brand: "DAZN",
     title: "Sports Event Planning",
     description:

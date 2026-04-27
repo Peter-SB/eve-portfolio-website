@@ -7,6 +7,7 @@ import {
   Share2,
   Bookmark,
 } from "lucide-react";
+import { assetPath } from "@/lib/utils";
 
 const caseStudies = [
   {
@@ -17,7 +18,7 @@ const caseStudies = [
     description:
       "Led brand and marketing for a cult UK bakery, scaling a disruptive, content-first challenger brand. Controlled cross-business workflows, socials, content, emails, print, packaging and e-commerce.",
     stats: { likes: "20K", comments: "1.2K", shares: "8K", saves: "15K" },
-    logo: "/logos/get-baked.png",
+    logo: assetPath("/logos/get-baked.png"),
     iconBg: "#FFA8C7",
     cta: "START NOW",
     ctaHref: "#contact",
@@ -30,7 +31,7 @@ const caseStudies = [
     description:
       "Spearheaded international educational outlier in the music, DJ and event industry. Managed planning, creating, strategy and scheduling of all content across YouTube, TikTok, Instagram, Discord and Threads.",
     stats: { likes: "253K", comments: "350K", shares: "656K", saves: "40K" },
-    logo: "/logos/crossfader.png",
+    logo: assetPath("/logos/crossfader.png"),
     iconBg: "#D3DCE5",
     cta: "BOOK A CALL",
     ctaHref: "#contact",
