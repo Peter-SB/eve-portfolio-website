@@ -39,7 +39,16 @@ export function ReelsGallery() {
   );
 
   return (
-    <section className="py-12 md:py-24 bg-[#FAFAF5] bg-white overflow-hidden border border-black">
+    <section className="relative py-12 md:py-24 bg-[#FAFAF5] overflow-hidden">
+      {/* Dotted top border */}
+      <div
+        className="absolute top-0 left-0 right-0 h-0"
+        style={{
+          borderTop: "4px dashed #1a1a1a",
+          opacity: 1,
+        }}
+      />
+
       <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 pl-6 md:pl-12 lg:pl-20">
         {/* Left: title + controls — fixed width, doesn't scroll */}
         <div className="shrink-0 w-full md:w-72 md:mr-8 flex flex-col gap-0 md:justify-between self-stretch py-2">
@@ -135,6 +144,15 @@ export function ReelsGallery() {
           ))}
         </div>
       </div>
+
+      {/* Dotted bottom border */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-0"
+        style={{
+          borderBottom: "4px dashed #1a1a1a",
+          opacity: 1,
+        }}
+      />
     </section>
   );
 }

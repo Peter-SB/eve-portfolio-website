@@ -1,94 +1,119 @@
 "use client";
 
 import Image from "next/image";
+import { Linkedin } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="paper-texture relative min-h-[80vh] flex items-center px-6 md:px-12 lg:px-20 bg-[#FBF9F1] overflow-hidden">
-      {/* Top thin nav line */}
-      <div className="absolute left-0 right-0 top-6 px-6 md:px-12 lg:px-20">
-        <div className="flex items-center justify-between">
-          <div className="font-display text-2xl">SOCIAL &amp; CO</div>
-          <nav className="hidden md:flex items-center gap-8 text-sm tracking-widest">
-            <a href="#about" className="text-foreground/80">
-              About
-            </a>
-            <a href="#case-studies" className="text-foreground/80">
-              Work
-            </a>
-            <a href="#contact" className="text-foreground/80">
-              Contact
-            </a>
-            <a
-              href="/cv.pdf"
-              className="px-3 py-1 bg-foreground text-background rounded-full text-xs"
-            >
-              Resume
-            </a>
-          </nav>
-        </div>
-      </div>
-
-      <div className="max-w-7xl w-full mx-auto grid md:grid-cols-2 gap-8 items-center py-12">
-        {/* Left: headline */}
-        <div className="pt-12 md:pt-6">
-          <span className="block font-body text-sm tracking-widest text-muted-foreground mb-4">
-            SOCIAL MEDIA AGENCY
-          </span>
-
-          <h1 className="font-display text-6xl md:text-8xl lg:text-[120px] leading-[0.86] text-foreground mb-8">
+    <>
+      {/* Pink Navbar */}
+      <header className="w-full bg-[#FFA8C7] px-6 md:px-14 lg:px-20 py-3 flex items-center justify-between">
+        <div className="border-[2.5px] border-black px-3 py-1">
+          <span className="font-display text-lg font-bold tracking-wide leading-none">
             EVE DODD
-          </h1>
-
-          <p className="font-body text-base md:text-lg text-muted-foreground max-w-lg mb-8">
-            Creating a comprehensive and effective social media strategy that
-            aligns with your business goals and target audience.
-          </p>
-
-          <div className="flex gap-4">
-            <a
-              href="/cv.pdf"
-              className="inline-flex items-center rounded-full border border-black text-black bg-transparent px-6 py-3 text-sm font-body"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See CV
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              className="inline-flex items-center rounded-full bg-[#0077B5] text-white px-6 py-3 text-sm font-body"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkedin
-            </a>
-            <a
-              href="#case-studies"
-              className="inline-flex items-center text-sm font-body text-black bg-transparent"
-            >
-              Jump in \/
-            </a>
-          </div>
+          </span>
         </div>
 
-        {/* Right: image with decorative scallop shapes */}
-        <div className="relative w-full flex justify-center items-center">
-          {/* <div className="hidden md:block absolute -right-12 top-16 w-44 h-44 bg-[#E9EDF0] rounded-full" />
-          <div className="hidden md:block absolute -right-12 top-36 w-44 h-44 bg-[#E9EDF0] rounded-full" />
-          <div className="hidden md:block absolute -right-12 top-56 w-44 h-44 bg-[#E9EDF0] rounded-full" /> */}
+        <nav className="hidden md:flex items-center gap-10 font-body text-base">
+          <a
+            href="#case-studies"
+            className="text-black hover:opacity-60 transition-opacity"
+          >
+            Projects
+          </a>
+          <a
+            href="#reels"
+            className="text-black hover:opacity-60 transition-opacity"
+          >
+            Services
+          </a>
+          <a
+            href="#contact"
+            className="text-black hover:opacity-60 transition-opacity"
+          >
+            Contact
+          </a>
+          <a
+            href="/eve-dod-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black hover:opacity-60 transition-opacity"
+          >
+            Resume
+          </a>
+        </nav>
 
-          <div className="relative w-[420px] h-[560px] md:w-[520px] md:h-[680px] rounded-2xl overflow-hidden border border-foreground/10 bg-white">
+        <a
+          href="https://www.linkedin.com/in/evedodd"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-black text-white w-9 h-9 flex items-center justify-center rounded-sm"
+          aria-label="LinkedIn"
+        >
+          <Linkedin size={18} strokeWidth={2.5} />
+        </a>
+      </header>
+
+      {/* Hero Section */}
+      <section className="bg-[#FDFAF3] px-6 md:px-14 lg:px-20 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 items-center justify-between">
+          {/* Left: content */}
+          <div className="flex flex-col gap-6 flex-1">
+            <h1
+              className="font-display text-[90px] md:text-[130px] lg:text-[160px] leading-[0.85] text-black"
+              style={{ fontFamily: "PaperCraft, Impact, sans-serif" }}
+            >
+              EVE DODD
+            </h1>
+
+            <p className="font-body font-bold text-lg md:text-xl text-black tracking-wide uppercase">
+              Branding &amp; Social Media Expert
+            </p>
+
+            <p className="font-body text-base text-black/70 max-w-lg leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div className="flex flex-wrap gap-3 mt-1">
+              <a
+                href="#case-studies"
+                className="px-8 py-3 rounded-full bg-[#D3E65E] text-black font-body font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
+              >
+                Projects
+              </a>
+              <a
+                href="#reels"
+                className="px-8 py-3 rounded-full bg-[#FFA8C7] text-black font-body font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
+              >
+                Creative Work
+              </a>
+              <a
+                href="/eve-dod-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 rounded-full bg-[#D3DCE5] text-black font-body font-bold text-sm uppercase tracking-widest hover:opacity-90 transition-opacity"
+              >
+                CV
+              </a>
+            </div>
+          </div>
+
+          {/* Right: hero doodle */}
+          <div className="flex-shrink-0 flex items-center justify-center md:justify-end">
             <Image
-              src="/eve-headshot.png"
-              alt="Eve"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              src="/hero-doodle.png"
+              alt="Eve Dodd photo strip"
+              width={360}
+              height={560}
+              className="object-contain"
               priority
             />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
