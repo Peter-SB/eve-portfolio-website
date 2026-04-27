@@ -32,13 +32,13 @@ export function Contact() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="mailto:hello@evedod.com"
+                href="mailto:hello@evedodd.com"
                 className="inline-block font-body font-medium text-sm tracking-widest uppercase border border-white rounded-full px-8 py-3 text-white hover:bg-white hover:text-[#1C1C1A] transition-colors"
               >
                 Get in Touch
               </a>
               <a
-                href="/eve-dod-cv.pdf"
+                href="/eve-dodd-cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block font-body font-medium text-sm tracking-widest uppercase border border-white/20 rounded-full px-8 py-3 text-white/60 hover:border-white hover:text-white transition-colors"
@@ -51,7 +51,7 @@ export function Contact() {
           {/* Right: contact links */}
           <div className="flex flex-col justify-center gap-8">
             <a
-              href="mailto:hello@evedod.com"
+              href="mailto:hello@evedodd.com"
               className="group flex items-center justify-between border-b border-white/10 pb-6"
             >
               <div className="flex items-center gap-4">
@@ -61,7 +61,7 @@ export function Contact() {
                     Email
                   </span>
                   <span className="font-body text-lg text-white group-hover:text-primary transition-colors">
-                    hello@evedod.com
+                    hello@evedodd.com
                   </span>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export function Contact() {
                     LinkedIn
                   </span>
                   <span className="font-body text-lg text-white group-hover:text-primary transition-colors">
-                    linkedin.com/in/evedod
+                    linkedin.com/in/evedodd
                   </span>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Eve Dod | Social Media Manager",
+  title: "Eve Dodd | Social Media Manager",
   description:
     "Freelance Social Media & Brand Manager with 5+ years of experience. Branding, content strategy, and community growth for brands like Get Baked, YouTube, Crossfader, and DAZN.",
   generator: "v0.app",

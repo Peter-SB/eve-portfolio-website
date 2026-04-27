@@ -16,7 +16,7 @@ Features:
 
 ## Hero
 
-Eve Dod, 
+Eve Dodd, 
 Social Media Manager
 5+ Years
 8+ Brands

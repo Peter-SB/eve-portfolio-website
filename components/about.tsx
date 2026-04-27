@@ -30,7 +30,7 @@ export function About() {
               <div className="relative aspect-[4/5] bg-muted">
                 <Image
                   src="/eve-headshot.png"
-                  alt="Eve Dod"
+                  alt="Eve Dodd"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, 40vw"

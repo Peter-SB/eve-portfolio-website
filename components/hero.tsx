@@ -35,7 +35,7 @@ export function Hero() {
             Contact
           </a>
           <a
-            href={assetPath("/eve-dod-cv.pdf")}
+            href={assetPath("/eve-dodd-cv.pdf")}
             target="_blank"
             rel="noopener noreferrer"
             className="text-black hover:opacity-60 transition-opacity"
@@ -92,7 +92,7 @@ export function Hero() {
                 Creative Work
               </a>
               <a
-                href={assetPath("/eve-dod-cv.pdf")}
+                href={assetPath("/eve-dodd-cv.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full bg-[#D3DCE5] text-black font-body font-bold text-sm uppercase tracking-widest border-2 border-black hover:opacity-90 transition-opacity"
