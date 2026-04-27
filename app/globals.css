@@ -5,7 +5,8 @@
 
 @font-face {
   font-family: "PaperCraft";
-  src: url("/fonts/header-Paper-Craft-1.woff2") format("woff2");
+  src: url("/eve-portfolio-website/fonts/header-Paper-Craft-1.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -13,7 +14,8 @@
 
 @font-face {
   font-family: "BodyStyle";
-  src: url("/fonts/body-style-light.woff2") format("woff2");
+  src: url("/eve-portfolio-website/fonts/body-style-light.woff2")
+    format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -21,7 +23,8 @@
 
 @font-face {
   font-family: "BodyStyle";
-  src: url("/fonts/body-style-medium.woff2") format("woff2");
+  src: url("/eve-portfolio-website/fonts/body-style-medium.woff2")
+    format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -29,7 +32,8 @@
 
 @font-face {
   font-family: "BodyStyle";
-  src: url("/fonts/body-style-heavy.woff2") format("woff2");
+  src: url("/eve-portfolio-website/fonts/body-style-heavy.woff2")
+    format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
