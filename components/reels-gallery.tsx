@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { assetPath } from "@/lib/utils";
 
 const reels = [
@@ -22,6 +22,39 @@ export function ReelsGallery() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(0);
   const total = reels.length;
+  const [reelsPerPage, setReelsPerPage] = useState(total);
+
+  // Calculate how many reels fit on screen
+  useEffect(() => {
+    const calculateReelsPerPage = () => {
+      if (!trackRef.current) return;
+
+      const containerWidth =
+        trackRef.current.clientWidth ||
+        trackRef.current.getBoundingClientRect().width;
+      // Reel width: 180px mobile, 240px desktop + gap (16px mobile, 24px desktop)
+      const isMobile = window.innerWidth < 768;
+      const reelWidth = isMobile ? 180 : 240;
+      const gap = isMobile ? 16 : 24;
+
+      const itemsPerPage = Math.floor(
+        (containerWidth + gap) / (reelWidth + gap),
+      );
+      // If calculation results in 0 or a number >= total, treat as single page
+      if (itemsPerPage <= 0 || itemsPerPage >= total) {
+        setReelsPerPage(total);
+      } else {
+        setReelsPerPage(itemsPerPage);
+      }
+    };
+
+    calculateReelsPerPage();
+    window.addEventListener("resize", calculateReelsPerPage);
+    return () => window.removeEventListener("resize", calculateReelsPerPage);
+  }, [total]);
+
+  const totalPages = Math.ceil(total / reelsPerPage);
+  const currentPage = Math.floor(current / reelsPerPage);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -37,6 +70,14 @@ export function ReelsGallery() {
       });
     },
     [total],
+  );
+
+  const scrollToPage = useCallback(
+    (pageIndex: number) => {
+      const reelIndex = pageIndex * reelsPerPage;
+      scrollTo(reelIndex);
+    },
+    [reelsPerPage, scrollTo],
   );
 
   return (
@@ -66,16 +107,16 @@ export function ReelsGallery() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">
               <button
-                onClick={() => scrollTo(current - 1)}
-                disabled={current === 0}
+                onClick={() => scrollToPage(currentPage - 1)}
+                disabled={currentPage === 0}
                 aria-label="Previous"
                 className="w-9 h-9 rounded-full border border-foreground flex items-center justify-center font-body text-sm text-foreground disabled:opacity-30 hover:bg-foreground hover:text-background transition-colors"
               >
                 ←
               </button>
               <button
-                onClick={() => scrollTo(current + 1)}
-                disabled={current === total - 1}
+                onClick={() => scrollToPage(currentPage + 1)}
+                disabled={currentPage === totalPages - 1}
                 aria-label="Next"
                 className="w-9 h-9 rounded-full border border-foreground flex items-center justify-center font-body text-sm text-foreground disabled:opacity-30 hover:bg-foreground hover:text-background transition-colors"
               >
@@ -83,19 +124,21 @@ export function ReelsGallery() {
               </button>
             </div>
             <span className="font-body text-xs text-muted-foreground tracking-widest">
-              {String(current + 1).padStart(2, "0")} /{" "}
-              {String(total).padStart(2, "0")}
+              {String(currentPage + 1).padStart(2, "0")} /{" "}
+              {String(totalPages).padStart(2, "0")}
             </span>
 
             {/* Dot indicators */}
             <div className="flex gap-1.5 mt-1">
-              {reels.map((_, i) => (
+              {Array.from({ length: totalPages }).map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => scrollTo(i)}
-                  aria-label={`Go to reel ${i + 1}`}
+                  onClick={() => scrollToPage(i)}
+                  aria-label={`Go to page ${i + 1}`}
                   className={`h-1 rounded-full transition-all duration-300 ${
-                    i === current ? "w-5 bg-foreground" : "w-1 bg-foreground/30"
+                    i === currentPage
+                      ? "w-5 bg-foreground"
+                      : "w-1 bg-foreground/30"
                   }`}
                 />
               ))}
@@ -106,7 +149,7 @@ export function ReelsGallery() {
         {/* Right: carousel track bleeds to right edge */}
         <div
           ref={trackRef}
-          className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth pr-6 pb-2 snap-x snap-mandatory flex-1"
+          className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth pr-6 pb-2 snap-x snap-mandatory flex-1 max-w-full"
           style={{ scrollbarWidth: "none" }}
         >
           {reels.map((reel, index) => (

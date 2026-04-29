@@ -23,12 +23,6 @@ export function Hero() {
             Projects
           </a>
           <a
-            href="#reels"
-            className="text-black hover:opacity-60 transition-opacity"
-          >
-            Services
-          </a>
-          <a
             href="#contact"
             className="text-black hover:opacity-60 transition-opacity"
           >
