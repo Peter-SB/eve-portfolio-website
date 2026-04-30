@@ -1,35 +1,35 @@
 {
-  "sectionTitle": "Skills and Achievements",
-  "items": [
-    {
-      "number": "01",
-      "logo": "/logos/last-sun-dance-alt.png",
-      "brand": "Last Sun Dance",
-      "title": "Membership Growth",
-      "description": "Stepped into the first marketing and branding strategist role. Managed activation across multiple strands including collaboration management with RAB and Tenzing.",
-      "metric": "+33% Memberships",
-      "bgColor": "#BFDB38",
-      "decorative": "cursor"
-    },
-    {
-      "number": "02",
-      "logo": "/logos/george.png",
-      "brand": "ASDA George",
-      "title": "Omni-Channel Campaigns",
-      "description": "Strategized, planned and activated omni-channel campaigns across social media and email marketing (100k+ mailing list), managing in-house and external teams.",
-      "metric": "100K+ Email List",
-      "bgColor": "#F4A0C0",
-      "decorative": null
-    },
-    {
-      "number": "03",
-      "logo": "/logos/dazn.png",
-      "brand": "DAZN",
-      "title": "Sports Event Planning",
-      "description": "Project coordinated activity and critical paths across teams for digital event streams in international sports. Planned calendars across F1, Coppa Italia and Matchroom Boxing.",
-      "metric": "14 Month Plans",
-      "bgColor": "#B8C8DC",
-      "decorative": "lightning"
-    }
-  ]
+    "sectionTitle": "Skills and Achievements",
+    "items": [
+        {
+            "number": "01",
+            "logo": "/logos/last-sun-dance-alt.png",
+            "brand": "Last Sun Dance",
+            "title": "Membership Growth",
+            "description": "Stepped into the first marketing and branding strategist role. Managed activation across multiple strands including collaboration management with RAB and Tenzing.",
+            "metric": "+33% Memberships",
+            "bgColor": "#BFDB38",
+            "decorative": "cursor"
+        },
+        {
+            "number": "02",
+            "logo": "/logos/george.png",
+            "brand": "ASDA George",
+            "title": "Omni-Channel Campaigns",
+            "description": "Strategized, planned and activated omni-channel campaigns across social media and email marketing (100k+ mailing list), managing in-house and external teams.",
+            "metric": "100K+ Email List",
+            "bgColor": "#F4A0C0",
+            "decorative": null
+        },
+        {
+            "number": "03",
+            "logo": "/logos/dazn.png",
+            "brand": "DAZN",
+            "title": "Sports Event Planning",
+            "description": "Project coordinated activity and critical paths across teams for digital event streams in international sports. Planned calendars across F1, Coppa Italia and Matchroom Boxing.",
+            "metric": "14 Month Plans",
+            "bgColor": "#B8C8DC",
+            "decorative": "lightning"
+        }
+    ]
 }

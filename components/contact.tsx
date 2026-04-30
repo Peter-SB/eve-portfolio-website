@@ -7,7 +7,8 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function Contact() {
-  const { sectionLabel, heading, description, ctaButtons, contactLinks } = contactData;
+  const { sectionLabel, heading, description, ctaButtons, contactLinks } =
+    contactData;
 
   return (
     <section
@@ -22,7 +23,10 @@ export function Contact() {
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl uppercase text-white mt-4 leading-[0.95]">
             {heading.split("\n").map((line, i, arr) => (
-              <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+              <span key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </span>
             ))}
           </h2>
         </div>

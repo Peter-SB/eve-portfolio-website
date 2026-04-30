@@ -1,14 +1,41 @@
 {
-  "sectionLabel": "Brands I've Worked With",
-  "brands": [
-    { "name": "Get Baked", "logo": "/logos/get-baked.png" },
-    { "name": "YouTube", "logo": "/logos/youtube.png" },
-    { "name": "Crossfader", "logo": "/logos/crossfader.png" },
-    { "name": "Last Sun Dance", "logo": "/logos/last-sun-dance.png" },
-    { "name": "DAZN", "logo": "/logos/dazn.png" },
-    { "name": "George", "logo": "/logos/george.png" },
-    { "name": "Laundry Club", "logo": "/logos/laundry-club.png" },
-    { "name": "1021 Creative", "logo": "/logos/1021-creative.png" },
-    { "name": "Honda", "logo": "/logos/honda.png" }
-  ]
+    "sectionLabel": "Brands I've Worked With",
+    "brands": [
+        {
+            "name": "Get Baked",
+            "logo": "/logos/get-baked.png"
+        },
+        {
+            "name": "YouTube",
+            "logo": "/logos/youtube.png"
+        },
+        {
+            "name": "Crossfader",
+            "logo": "/logos/crossfader.png"
+        },
+        {
+            "name": "Last Sun Dance",
+            "logo": "/logos/last-sun-dance.png"
+        },
+        {
+            "name": "DAZN",
+            "logo": "/logos/dazn.png"
+        },
+        {
+            "name": "George",
+            "logo": "/logos/george.png"
+        },
+        {
+            "name": "Laundry Club",
+            "logo": "/logos/laundry-club.png"
+        },
+        {
+            "name": "1021 Creative",
+            "logo": "/logos/1021-creative.png"
+        },
+        {
+            "name": "Honda",
+            "logo": "/logos/honda.png"
+        }
+    ]
 }

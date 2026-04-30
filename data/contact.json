@@ -1,24 +1,31 @@
 {
-  "sectionLabel": "Let's Work Together",
-  "heading": "Ready to Grow\nYour Brand?",
-  "description": "I'm always excited to work with brands who are ready to take their social media presence to the next level. Let's chat about how I can help.",
-  "ctaButtons": [
-    { "label": "Get in Touch", "href": "mailto:hello@evedodd.com" },
-    { "label": "Download CV", "href": "/eve-dodd-cv.pdf", "external": true }
-  ],
-  "contactLinks": [
-    {
-      "type": "email",
-      "label": "Email",
-      "display": "hello@evedodd.com",
-      "href": "mailto:hello@evedodd.com"
-    },
-    {
-      "type": "linkedin",
-      "label": "LinkedIn",
-      "display": "linkedin.com/in/evedodd",
-      "href": "https://www.linkedin.com/in/evedodd",
-      "external": true
-    }
-  ]
+    "sectionLabel": "Let's Work Together",
+    "heading": "Ready to Grow\nYour Brand?",
+    "description": "I'm always excited to work with brands who are ready to take their social media presence to the next level. Let's chat about how I can help.",
+    "ctaButtons": [
+        {
+            "label": "Get in Touch",
+            "href": "mailto:hello@evedodd.com"
+        },
+        {
+            "label": "Download CV",
+            "href": "/eve-dodd-cv.pdf",
+            "external": true
+        }
+    ],
+    "contactLinks": [
+        {
+            "type": "email",
+            "label": "Email",
+            "display": "hello@evedodd.com",
+            "href": "mailto:hello@evedodd.com"
+        },
+        {
+            "type": "linkedin",
+            "label": "LinkedIn",
+            "display": "linkedin.com/in/evedodd",
+            "href": "https://www.linkedin.com/in/evedodd",
+            "external": true
+        }
+    ]
 }

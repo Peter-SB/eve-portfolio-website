@@ -15,7 +15,10 @@ export function About() {
             </span>
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl leading-tight text-foreground mt-4 mb-6">
               {heading.split("\n").map((line, i, arr) => (
-                <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                <span key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br />}
+                </span>
               ))}
             </h2>
 
