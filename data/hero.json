@@ -1,0 +1,25 @@
+{
+  "navbar": {
+    "name": "EVE DODD",
+    "links": [
+      { "label": "Projects", "href": "#case-studies" },
+      { "label": "Contact", "href": "#contact" },
+      { "label": "Resume", "href": "/eve-dodd-cv.pdf", "external": true }
+    ],
+    "linkedInUrl": "https://www.linkedin.com/in/evedodd"
+  },
+  "hero": {
+    "name": "EVE DODD",
+    "subtitle": "Branding & Social Media Expert",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "ctaButtons": [
+      { "label": "Projects", "href": "#case-studies", "color": "#D3E65E" },
+      { "label": "Creative Work", "href": "#reels", "color": "#FFA8C7" },
+      { "label": "CV", "href": "/eve-dodd-cv.pdf", "color": "#D3DCE5", "external": true }
+    ],
+    "heroDoodle": {
+      "src": "/hero-doodle.png",
+      "alt": "Eve Dodd photo strip"
+    }
+  }
+}

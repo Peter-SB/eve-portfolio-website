@@ -1,41 +1,12 @@
 import Image from "next/image";
 import { assetPath } from "@/lib/utils";
+import highlightsData from "@/data/highlights.json";
 
-const highlights = [
-  {
-    number: "01",
-    logo: assetPath("/logos/last-sun-dance-alt.png"),
-    brand: "Last Sun Dance",
-    title: "Membership Growth",
-    description:
-      "Stepped into the first marketing and branding strategist role. Managed activation across multiple strands including collaboration management with RAB and Tenzing.",
-    metric: "+33% Memberships",
-    bgColor: "#BFDB38",
-    decorative: "cursor" as const,
-  },
-  {
-    number: "02",
-    logo: assetPath("/logos/george.png"),
-    brand: "ASDA George",
-    title: "Omni-Channel Campaigns",
-    description:
-      "Strategized, planned and activated omni-channel campaigns across social media and email marketing (100k+ mailing list), managing in-house and external teams.",
-    metric: "100K+ Email List",
-    bgColor: "#F4A0C0",
-    decorative: null,
-  },
-  {
-    number: "03",
-    logo: assetPath("/logos/dazn.png"),
-    brand: "DAZN",
-    title: "Sports Event Planning",
-    description:
-      "Project coordinated activity and critical paths across teams for digital event streams in international sports. Planned calendars across F1, Coppa Italia and Matchroom Boxing.",
-    metric: "14 Month Plans",
-    bgColor: "#B8C8DC",
-    decorative: "lightning" as const,
-  },
-];
+const highlights = highlightsData.items.map((item) => ({
+  ...item,
+  logo: assetPath(item.logo),
+  decorative: item.decorative as "cursor" | "lightning" | null,
+}));
 
 function CursorSparkle() {
   return (
@@ -100,7 +71,7 @@ export function Highlights() {
     <section className="py-24 px-6 md:px-12 lg:px-20 bg-[#FBFCEE]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center font-display font-bold tracking-wide uppercase text-foreground text-3xl md:text-4xl mb-16">
-          Skills and Achievements
+          {highlightsData.sectionTitle}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">

@@ -1,0 +1,15 @@
+{
+  "sectionLabel": "ABOUT",
+  "heading": "About\nMe",
+  "description": "Hi, I'm Eve — a social media manager who crafts engaging content and builds brand communities. I focus on strategy-first campaigns that increase visibility and convert followers into customers.",
+  "services": {
+    "title": "Services",
+    "items": [
+      "Brand Strategy & Positioning",
+      "Content Creation (video + stills)",
+      "Campaign Management & Reporting"
+    ],
+    "ctaLabel": "Get in touch",
+    "ctaHref": "#contact"
+  }
+}

@@ -3,18 +3,12 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { assetPath } from "@/lib/utils";
+import brandLogosData from "@/data/brand-logos.json";
 
-const brands = [
-  { name: "Get Baked", logo: assetPath("/logos/get-baked.png") },
-  { name: "YouTube", logo: assetPath("/logos/youtube.png") },
-  { name: "Crossfader", logo: assetPath("/logos/crossfader.png") },
-  { name: "Last Sun Dance", logo: assetPath("/logos/last-sun-dance.png") },
-  { name: "DAZN", logo: assetPath("/logos/dazn.png") },
-  { name: "George", logo: assetPath("/logos/george.png") },
-  { name: "Laundry Club", logo: assetPath("/logos/laundry-club.png") },
-  { name: "1021 Creative", logo: assetPath("/logos/1021-creative.png") },
-  { name: "Honda", logo: assetPath("/logos/honda.png") },
-];
+const brands = brandLogosData.brands.map((b) => ({
+  ...b,
+  logo: assetPath(b.logo),
+}));
 
 export function BrandLogos() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -43,7 +37,7 @@ export function BrandLogos() {
   return (
     <section className="py-14 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
       <p className="text-center text-sm text-muted-foreground mb-10 tracking-wide uppercase">
-        Brands I&apos;ve Worked With
+        {brandLogosData.sectionLabel}
       </p>
       <div
         ref={scrollRef}

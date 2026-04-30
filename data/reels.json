@@ -1,0 +1,13 @@
+{
+  "sectionLabel": "Content Samples",
+  "sectionTitle": "Reels & Videos",
+  "reels": [
+    { "src": "/reels/Cross-Fader-reel.mp4", "label": "Crossfader" },
+    { "src": "/reels/Get-Baked-reel.mp4", "label": "Get Baked" },
+    { "src": "/reels/LAUNDRY-CLUB-reel.mp4", "label": "Laundry Club" },
+    { "src": "/reels/Last-sun-dance.jpg", "label": "Last Sun Dance" },
+    { "src": "/reels/Cross-Fader-2.mp4", "label": "Crossfader" },
+    { "src": "/reels/Cross-Fader-3.mp4", "label": "Crossfader" },
+    { "src": "/reels/LAUNDRY-CLUB-reel.mp4", "label": "Laundry Club" }
+  ]
+}

@@ -8,35 +8,12 @@ import {
   Bookmark,
 } from "lucide-react";
 import { assetPath } from "@/lib/utils";
+import caseStudiesData from "@/data/case-studies.json";
 
-const caseStudies = [
-  {
-    id: 1,
-    brand: "Get Baked",
-    label: "GET BAKED | CASE STUDY",
-    title: "SCALING A CULT UK\nBAKERY BRAND",
-    description:
-      "Led brand and marketing for a cult UK bakery, scaling a disruptive, content-first challenger brand. Controlled cross-business workflows, socials, content, emails, print, packaging and e-commerce.",
-    stats: { likes: "20K", comments: "1.2K", shares: "8K", saves: "15K" },
-    logo: assetPath("/logos/get-baked.png"),
-    iconBg: "#FFA8C7",
-    cta: "START NOW",
-    ctaHref: "#contact",
-  },
-  {
-    id: 2,
-    brand: "Crossfader",
-    label: "CROSSFADER | CASE STUDY",
-    title: "GROWING A GLOBAL\nMUSIC COMMUNITY",
-    description:
-      "Spearheaded international educational outlier in the music, DJ and event industry. Managed planning, creating, strategy and scheduling of all content across YouTube, TikTok, Instagram, Discord and Threads.",
-    stats: { likes: "253K", comments: "350K", shares: "656K", saves: "40K" },
-    logo: assetPath("/logos/crossfader.png"),
-    iconBg: "#D3DCE5",
-    cta: "BOOK A CALL",
-    ctaHref: "#contact",
-  },
-];
+const caseStudies = caseStudiesData.studies.map((s) => ({
+  ...s,
+  logo: assetPath(s.logo),
+}));
 
 const CaseIcon = ({ id, bg }: { id: number; bg: string }) => (
   <div
@@ -103,6 +80,8 @@ function MiniPreview({ study }: { study: (typeof caseStudies)[number] }) {
 }
 
 export function CaseStudies() {
+  const { sectionTitle, cta } = caseStudiesData;
+
   return (
     <section
       id="case-studies"
@@ -110,7 +89,7 @@ export function CaseStudies() {
     >
       {/* Title */}
       <h2 className="font-display text-4xl md:text-5xl lg:text-6xl uppercase text-black text-center mb-12 leading-none">
-        My Latest Work
+        {sectionTitle}
       </h2>
 
       {/* Cards grid */}
@@ -132,10 +111,10 @@ export function CaseStudies() {
       {/* CTA button */}
       <div className="flex justify-center mb-10">
         <a
-          href="#contact"
+          href={cta.href}
           className="px-12 py-4 rounded-full bg-[#FFA8C7] border-[2.5px] border-black text-black font-display text-xl md:text-2xl uppercase tracking-wide hover:opacity-90 transition-opacity"
         >
-          View More Projects
+          {cta.label}
         </a>
       </div>
     </section>

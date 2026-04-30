@@ -3,16 +3,12 @@
 import Image from "next/image";
 import { useRef, useState, useCallback, useEffect } from "react";
 import { assetPath } from "@/lib/utils";
+import reelsData from "@/data/reels.json";
 
-const reels = [
-  { src: assetPath("/reels/Cross-Fader-reel.mp4"), label: "Crossfader" },
-  { src: assetPath("/reels/Get-Baked-reel.mp4"), label: "Get Baked" },
-  { src: assetPath("/reels/LAUNDRY-CLUB-reel.mp4"), label: "Laundry Club" },
-  { src: assetPath("/reels/Last-sun-dance.jpg"), label: "Last Sun Dance" },
-  { src: assetPath("/reels/Cross-Fader-2.mp4"), label: "Crossfader" },
-  { src: assetPath("/reels/Cross-Fader-3.mp4"), label: "Crossfader" },
-  { src: assetPath("/reels/LAUNDRY-CLUB-reel.mp4"), label: "Laundry Club" },
-];
+const reels = reelsData.reels.map((r) => ({
+  ...r,
+  src: assetPath(r.src),
+}));
 
 function isImage(src: string) {
   return /\.(jpg|jpeg|png|webp|gif)$/i.test(src);
@@ -96,10 +92,10 @@ export function ReelsGallery() {
         <div className="shrink-0 w-full md:w-72 md:mr-8 flex flex-col gap-0 md:justify-between self-stretch py-2">
           <div className="pb-5">
             <span className="font-body font-medium tracking-[0.2em] uppercase text-foreground/60 text-xs">
-              Content Samples
+              {reelsData.sectionLabel}
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl uppercase text-foreground mt-3 leading-[0.95]">
-              Reels &amp; Videos
+              {reelsData.sectionTitle}
             </h2>
           </div>
 
