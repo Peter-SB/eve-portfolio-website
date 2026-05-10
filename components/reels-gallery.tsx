@@ -19,6 +19,7 @@ export function ReelsGallery() {
   const [current, setCurrent] = useState(0);
   const total = reels.length;
   const [reelsPerPage, setReelsPerPage] = useState(total);
+  const videoRefsMap = useRef(new Map<number, HTMLVideoElement>());
 
   // Calculate how many reels fit on screen
   useEffect(() => {
@@ -48,6 +49,35 @@ export function ReelsGallery() {
     window.addEventListener("resize", calculateReelsPerPage);
     return () => window.removeEventListener("resize", calculateReelsPerPage);
   }, [total]);
+
+  // Lazy load videos with Intersection Observer scoped to the scroll container
+  useEffect(() => {
+    if (!trackRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = parseInt(entry.target.getAttribute("data-index") || "-1");
+          const video = videoRefsMap.current.get(index);
+          if (!video || isImage(reels[index].src)) return;
+
+          if (entry.isIntersecting) {
+            video.preload = "auto";
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+            video.preload = "none";
+          }
+        });
+      },
+      { root: trackRef.current, threshold: 0.25 },
+    );
+
+    const cards = trackRef.current.querySelectorAll("[data-index]");
+    cards.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
 
   const totalPages = Math.ceil(total / reelsPerPage);
   const currentPage = Math.floor(current / reelsPerPage);
@@ -151,6 +181,7 @@ export function ReelsGallery() {
           {reels.map((reel, index) => (
             <div
               key={index}
+              data-index={index}
               onClick={() => scrollTo(index)}
               className="group relative shrink-0 w-[180px] md:w-[240px] rounded-xl border border-foreground/10 overflow-hidden snap-start bg-white cursor-pointer"
             >
@@ -165,12 +196,14 @@ export function ReelsGallery() {
                   />
                 ) : (
                   <video
+                    ref={(el) => {
+                      if (el) videoRefsMap.current.set(index, el);
+                    }}
                     src={reel.src}
                     muted
-                    autoPlay
                     loop
                     playsInline
-                    preload="auto"
+                    preload="none"
                     className="w-full h-full object-cover"
                   />
                 )}

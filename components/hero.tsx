@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Linkedin, Mail } from "lucide-react";
 import { assetPath } from "@/lib/utils";
 import heroData from "@/data/hero.json";
-import { SkillsCard } from "@/components/skills-card";
 
 export function Hero() {
   const { navbar, hero } = heroData;
@@ -90,20 +89,17 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Centre: hero doodle */}
+          {/* Right: Hero + Skills combined image */}
           <div className="flex items-center justify-center shrink min-w-0">
             <Image
-              src={assetPath(hero.heroDoodle.src)}
-              alt={hero.heroDoodle.alt}
-              width={360}
-              height={560}
-              className="object-contain w-full max-w-[360px] h-auto"
+              src={assetPath("/hero-skills.png")}
+              alt="Eve Dodd with skills"
+              width={420}
+              height={520}
+              className="object-contain w-full max-w-105 h-auto"
               priority
             />
           </div>
-
-          {/* Right: Skills card */}
-          <SkillsCard />
         </div>
       </section>
     </>
