@@ -65,7 +65,7 @@ function LightningBolt() {
 
 export function Highlights() {
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-20 bg-[#FBFCEE]">
+    <section id="highlights" className="py-24 px-6 md:px-12 lg:px-20 bg-[#FBFCEE]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-center font-display font-bold tracking-wide uppercase text-foreground text-3xl md:text-4xl mb-16">
           {highlightsData.sectionTitle}
