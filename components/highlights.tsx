@@ -82,13 +82,15 @@ export function Highlights() {
               {highlight.decorative === "cursor" && <CursorSparkle />}
 
               {/* Content */}
-              <div>
-                <h3 className="font-display text-xl md:text-2xl uppercase leading-tight text-foreground mb-4">
-                  {highlight.title}
-                </h3>
-                <p className="font-body font-light text-sm text-muted-foreground leading-relaxed mb-5">
-                  {highlight.description}
-                </p>
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="font-display text-xl md:text-2xl uppercase leading-tight text-foreground mb-4">
+                    {highlight.title}
+                  </h3>
+                  <p className="font-body font-light text-sm text-muted-foreground leading-relaxed mb-5">
+                    {highlight.description}
+                  </p>
+                </div>
                 {highlight.cta && (
                   <a
                     href={highlight.cta.href}
