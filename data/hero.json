@@ -16,7 +16,8 @@
                 "external": true
             }
         ],
-        "linkedInUrl": "https://www.linkedin.com/in/evedodd"
+        "linkedInUrl": "https://www.linkedin.com/in/eve-dodd-629020153/",
+        "contactEmail": "eve.exe.marketing@gmail.com"
     },
     "hero": {
         "name": "EVE DODD",
@@ -44,5 +45,51 @@
             "src": "/hero-doodle.png",
             "alt": "Eve Dodd photo strip"
         }
+    },
+    "skillsCard": {
+        "label": "Skills",
+        "available": "Available for work",
+        "skills": [
+            {
+                "category": "Social & Content",
+                "items": [
+                    "Content Strategy",
+                    "Social Media Management",
+                    "Video Editing (CapCut)",
+                    "Community Management",
+                    "Email Marketing"
+                ]
+            },
+            {
+                "category": "Brand & Creative",
+                "items": [
+                    "Brand Strategy & Positioning",
+                    "Copywriting & Tone of Voice",
+                    "Graphic Design (Canva, Figma, Adobe)"
+                ]
+            },
+            {
+                "category": "Data & Planning",
+                "items": [
+                    "Analytics & Reporting (PowerBI, GA)",
+                    "Campaign Planning",
+                    "Project Management (Asana, Jira)"
+                ]
+            }
+        ],
+        "stats": [
+            {
+                "value": "656K",
+                "label": "YouTube Subs"
+            },
+            {
+                "value": "350K",
+                "label": "TikTok Followers"
+            },
+            {
+                "value": "+20%",
+                "label": "Avg. Engagement"
+            }
+        ]
     }
 }

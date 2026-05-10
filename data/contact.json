@@ -5,7 +5,7 @@
     "ctaButtons": [
         {
             "label": "Get in Touch",
-            "href": "mailto:hello@evedodd.com"
+            "href": "mailto:eve.exe.marketing@gmail.com"
         },
         {
             "label": "Download CV",
@@ -17,14 +17,14 @@
         {
             "type": "email",
             "label": "Email",
-            "display": "hello@evedodd.com",
-            "href": "mailto:hello@evedodd.com"
+            "display": "eve.exe.marketing@gmail.com",
+            "href": "mailto:eve.exe.marketing@gmail.com"
         },
         {
             "type": "linkedin",
             "label": "LinkedIn",
-            "display": "linkedin.com/in/evedodd",
-            "href": "https://www.linkedin.com/in/evedodd",
+            "display": "www.linkedin.com/in/eve-dodd-629020153",
+            "href": "https://www.linkedin.com/in/eve-dodd-629020153/",
             "external": true
         }
     ]
