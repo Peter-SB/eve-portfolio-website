@@ -54,12 +54,12 @@ export function Hero() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-[#FDFAF3] px-6 md:px-14 lg:px-20 py-14 md:py-20 overflow-x-hidden">
-        <div className="w-full flex flex-wrap lg:flex-nowrap gap-8 items-stretch">
+      <section className="bg-[#FDFAF3] px-6 md:px-10 lg:px-16 pt-10 pb-0 md:pt-14 md:pb-0 overflow-x-hidden">
+        <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch">
           {/* Left: content */}
-          <div className="flex flex-col gap-6 flex-1 min-w-[140px] justify-center">
+          <div className="flex flex-col gap-4 md:flex-1 justify-center md:pb-14 mt-5">
             <h1
-              className="font-display text-[90px] md:text-[130px] lg:text-[160px] leading-[0.85] text-black"
+              className="font-display text-[80px] md:text-[110px] lg:text-[140px] xl:text-[170px] 2xl:text-[200px] leading-[0.85] text-black"
               style={{ fontFamily: "PaperCraft, Impact, sans-serif" }}
             >
               {hero.name}
@@ -69,11 +69,18 @@ export function Hero() {
               {hero.subtitle}
             </p>
 
-            <p className="font-body text-base text-black/70 max-w-lg leading-relaxed">
-              {hero.description}
-            </p>
+            <div className="flex flex-col gap-3 max-w-2xl">
+              {hero.description.split("\n\n").map((para, i) => (
+                <p
+                  key={i}
+                  className="font-body text-base text-black/70 leading-relaxed"
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
 
-            <div className="flex flex-wrap gap-3 mt-1">
+            <div className="flex flex-wrap gap-3 mt-2">
               {hero.ctaButtons.map((btn) => (
                 <a
                   key={btn.label}
@@ -90,13 +97,13 @@ export function Hero() {
           </div>
 
           {/* Right: Hero + Skills combined image */}
-          <div className="flex items-center justify-center shrink min-w-0">
+          <div className="flex items-end justify-center shrink-0 md:w-[45%] lg:w-[48%] xl:w-[50%]">
             <Image
               src={assetPath("/hero-skills.png")}
               alt="Eve Dodd with skills"
-              width={420}
+              width={620}
               height={520}
-              className="object-contain w-full max-w-105 h-auto"
+              className="object-contain object-bottom h-auto max-h-[70vh] md:max-h-none pb-14"
               priority
             />
           </div>

@@ -35,7 +35,7 @@ export function BrandLogos() {
   }, []);
 
   return (
-    <section className="py-14 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
+    <section className="py-8 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
       <p className="text-center text-sm text-muted-foreground mb-10 tracking-wide uppercase">
         {brandLogosData.sectionLabel}
       </p>
