@@ -54,7 +54,7 @@ export function BrandLogos() {
               alt={brand.name}
               width={150}
               height={60}
-              className="paper-texture object-contain max-h-14 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              className="paper-texture object-contain max-h-14 w-auto opacity-70 hover:opacity-100 grayscale-30 hover:grayscale-0 hover:scale-105 transition"
             />
           </div>
         ))}
