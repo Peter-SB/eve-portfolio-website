@@ -35,19 +35,19 @@ export function BrandLogos() {
   }, []);
 
   return (
-    <section className="py-8 px-6 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
+    <section className="py-8 px-0 md:px-0 lg:px-0 border-y bg-[#CBD5E1] border border-black">
       <p className="text-center text-sm text-muted-foreground mb-10 tracking-wide uppercase">
         {brandLogosData.sectionLabel}
       </p>
       <div
         ref={scrollRef}
-        className="flex overflow-hidden gap-12 md:gap-16 items-center"
+        className="flex overflow-hidden items-center"
         style={{ scrollBehavior: "auto" }}
       >
         {[...brands, ...brands].map((brand, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex items-center justify-center min-w-[120px] md:min-w-[150px] h-16"
+            className="flex-shrink-0 flex items-center justify-center px-6 md:px-16 h-16"
           >
             <Image
               src={brand.logo}
