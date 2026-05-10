@@ -3,31 +3,34 @@
     "items": [
         {
             "number": "01",
-            "logo": "/logos/last-sun-dance-alt.png",
-            "brand": "Last Sun Dance",
-            "title": "Membership Growth",
-            "description": "Stepped into the first marketing and branding strategist role. Managed activation across multiple strands including collaboration management with RAB and Tenzing.",
-            "metric": "+33% Memberships",
+            "title": "LEADERSHIP",
+            "description": "My experience allows me to bring expertise to brand management positions. I\u2019ve owned total brand proposition for challenger and legacy brands, leading external teams and internal colleagues to produce content, activate campaigns and launch collaborations.",
+            "cta": {
+                "label": "See my experience",
+                "href": "/eve-dodd-cv.pdf"
+            },
             "bgColor": "#BFDB38",
             "decorative": "cursor"
         },
         {
             "number": "02",
-            "logo": "/logos/george.png",
-            "brand": "ASDA George",
-            "title": "Omni-Channel Campaigns",
-            "description": "Strategized, planned and activated omni-channel campaigns across social media and email marketing (100k+ mailing list), managing in-house and external teams.",
-            "metric": "100K+ Email List",
+            "title": "OMNI CHANNEL CAMPAIGNS",
+            "description": "From digital-first social campaigns and in-person activations, to packaging and POS, I\u2019m passionate about delivering truly seamless campaign experiences that immerse the customer in brand personality \u2014 at every touchpoint.",
+            "cta": {
+                "label": "See my experience",
+                "href": "/eve-dodd-cv.pdf"
+            },
             "bgColor": "#F4A0C0",
             "decorative": null
         },
         {
             "number": "03",
-            "logo": "/logos/dazn.png",
-            "brand": "DAZN",
-            "title": "Sports Event Planning",
-            "description": "Project coordinated activity and critical paths across teams for digital event streams in international sports. Planned calendars across F1, Coppa Italia and Matchroom Boxing.",
-            "metric": "14 Month Plans",
+            "title": "CONTENT PRODUCTION",
+            "description": "Podcasting. Short and long form video. Script writing. Blog production. And more. End-to-end content production is the foundation of my work. From planning to set management, to editing, I have honed my skills over the course of my career.",
+            "cta": {
+                "label": "Check out my content",
+                "href": "#reels"
+            },
             "bgColor": "#B8C8DC",
             "decorative": "lightning"
         }

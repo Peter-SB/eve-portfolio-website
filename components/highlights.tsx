@@ -1,10 +1,7 @@
-import Image from "next/image";
-import { assetPath } from "@/lib/utils";
 import highlightsData from "@/data/highlights.json";
 
 const highlights = highlightsData.items.map((item) => ({
   ...item,
-  logo: assetPath(item.logo),
   decorative: item.decorative as "cursor" | "lightning" | null,
 }));
 
@@ -78,45 +75,28 @@ export function Highlights() {
           {highlights.map((highlight) => (
             <div
               key={highlight.number}
-              className="relative rounded-[2.5rem] p-5"
-              style={{ backgroundColor: highlight.bgColor }}
+              className="relative rounded-[2.5rem] bg-white p-6 pt-12 pb-6"
+              style={{ borderWidth: "18px", borderColor: highlight.bgColor }}
             >
               {/* Decorative icons */}
               {highlight.decorative === "cursor" && <CursorSparkle />}
 
-              {/* Inner white card */}
-              <div className="bg-[#FAFAF5] rounded-2xl overflow-hidden">
-                {/* Logo area */}
-                <div className="relative mx-4 mt-4">
-                  <div className="bg-muted rounded-lg aspect-4/3 flex items-center justify-center overflow-hidden">
-                    <Image
-                      src={highlight.logo}
-                      alt={highlight.brand}
-                      width={120}
-                      height={120}
-                      className="object-contain"
-                    />
-                  </div>
-                  {/* Numbered badge */}
-                  <div className="absolute -bottom-5 left-6 w-10 h-10 rounded-full bg-[#D1D5DB] border-2 border-white flex items-center justify-center">
-                    <span className="text-xs font-body font-medium text-foreground">
-                      {highlight.number}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="px-6 pt-8 pb-6">
-                  <h3 className="font-display text-xl md:text-2xl uppercase leading-tight text-foreground mb-3">
-                    {highlight.title}
-                  </h3>
-                  <p className="font-body font-light text-sm text-muted-foreground leading-relaxed mb-4">
-                    {highlight.description}
-                  </p>
-                  <span className="font-display text-lg text-primary">
-                    {highlight.metric}
-                  </span>
-                </div>
+              {/* Content */}
+              <div>
+                <h3 className="font-display text-xl md:text-2xl uppercase leading-tight text-foreground mb-4">
+                  {highlight.title}
+                </h3>
+                <p className="font-body font-light text-sm text-muted-foreground leading-relaxed mb-5">
+                  {highlight.description}
+                </p>
+                {highlight.cta && (
+                  <a
+                    href={highlight.cta.href}
+                    className="inline-block font-display text-sm uppercase tracking-wider text-primary underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-all"
+                  >
+                    {highlight.cta.label} &rarr;
+                  </a>
+                )}
               </div>
 
               {/* Decorative icons */}
