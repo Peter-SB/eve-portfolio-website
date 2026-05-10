@@ -57,7 +57,7 @@ export function Hero() {
       <section className="bg-[#FDFAF3] px-6 md:px-10 lg:px-16 pt-10 pb-0 md:pt-14 md:pb-0 overflow-x-hidden">
         <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch">
           {/* Left: content */}
-          <div className="flex flex-col gap-4 md:flex-1 justify-center md:pb-14 mt-5">
+          <div className="flex flex-col gap-4 md:flex-1 justify-center md:pb-14 mt-5 lg:ml-14">
             <h1
               className="font-display text-[80px] md:text-[110px] lg:text-[140px] xl:text-[170px] 2xl:text-[200px] leading-[0.85] text-black"
               style={{ fontFamily: "PaperCraft, Impact, sans-serif" }}

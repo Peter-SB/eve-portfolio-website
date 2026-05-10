@@ -107,7 +107,7 @@ export function ReelsGallery() {
   );
 
   return (
-    <section className="relative py-12 md:py-24 bg-[#FAFAF5] overflow-hidden">
+    <section id="reels" className="relative py-12 md:py-24 bg-[#FAFAF5] overflow-hidden">
       {/* Dotted top border */}
       <div
         className="absolute top-0 left-0 right-0 h-0"
