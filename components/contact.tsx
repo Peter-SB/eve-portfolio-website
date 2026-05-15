@@ -1,4 +1,5 @@
 import { Linkedin, Mail } from "lucide-react";
+import { assetPath } from "@/lib/utils";
 import contactData from "@/data/contact.json";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -44,7 +45,7 @@ export function Contact() {
               {ctaButtons.map((btn, i) => (
                 <a
                   key={btn.label}
-                  href={btn.href}
+                  href={btn.external ? assetPath(btn.href) : btn.href}
                   target={btn.external ? "_blank" : undefined}
                   rel={btn.external ? "noopener noreferrer" : undefined}
                   className={
